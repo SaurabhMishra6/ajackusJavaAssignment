@@ -8,11 +8,11 @@ public class LibraryManager {
     private Map<String, Book> books = new HashMap<>(); //HashMap used for stores books with Book ID
 
     //Add a book to the Map Collection
-    public void addBook(String bookId, String title, String auther, String genre, String availabilityStatus){
+    public void addBook(String bookId, String title, String author, String genre, String availabilityStatus){
         if(books.containsKey(bookId)){
             System.out.println("Book ID must be unique. Book not added.");
         }else {
-            books.put(bookId, new Book(bookId, title, auther, genre, availabilityStatus));
+            books.put(bookId, new Book(bookId, title, author, genre, availabilityStatus));
             System.out.println("Book added successfully.");
         }
     }
